@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Operaciones con matrices | Álgebra Lineal: Matrices y Determinantes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Pablo Andrades Moya" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 Portable - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-auto-math" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Álgebra Lineal: Matrices y Determinantes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Álgebra lineal</a></li>
+   <li><a href="introduccin_a_las_matrices.html" class="no-ch">Introducción a las matrices</a></li>
+   <li id="active"><a href="operaciones_con_matrices.html" class="active no-ch">Operaciones con matrices</a></li>
+   <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+   <li><a href="introduccin_a_los_determinantes.html" class="no-ch">Introducción a los determinantes</a></li>
+   <li><a href="propiedades_de_los_determinantes.html" class="no-ch">Propiedades de los determinantes</a></li>
+   <li><a href="determinantes_de_orden_superior.html" class="no-ch">Determinantes de orden superior</a></li>
+   <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+   <li><a href="matriz_inversa.html" class="no-ch">Matriz inversa</a></li>
+   <li><a href="examen_final.html" class="no-ch">Examen final</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="introduccin_a_las_matrices.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Operaciones con matrices</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_plus" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_plus.png)"><h1 class="iDeviceTitle">Suma de matrices</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_136_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #ff0000;">Importante: </span>Para poder sumar dos matrices, las dos tienen que tener el mismo número de filas y el mismo número de columnas, es decir, el mismo orden.</p>
+<p></p>
+<p>El resultado de sumar dos matrices \(A\) y \(B\) de orden \(m \times n\) será una matriz de orden \(m \times n\) de forma que el elemento que se encuentra en la posición \(i,j\) va a ser el resultado de sumar el elemento \(a_{i,j}\) con el elemento \(b_{i,j}\).</p>
+<p>\[ \begin{pmatrix} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} \end{pmatrix}+\begin{pmatrix} b_{1,1} &amp; b_{1,2} &amp; \cdots &amp; b_{1,n} \\ b_{2,1} &amp; b_{2,2} &amp; \cdots &amp; b_{2,n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ b_{m,1} &amp; b_{m,2} &amp; \cdots &amp; b_{m,n} \end{pmatrix}=\begin{pmatrix} a_{1,1}+b_{1,1} &amp; a_{1,2}+b_{1,2} &amp; \cdots &amp; a_{1,n} +b_{1,n}\\ a_{2,1}+b_{2,1} &amp; a_{2,2}+b_{2,2} &amp; \cdots &amp; a_{2,n}+b_{2,n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m,1}+b_{m,1} &amp; a_{m,2}+b_{m,2} &amp; \cdots &amp; a_{m,n}+b_{m,n} \end{pmatrix}\]</p>
+<p></p>
+<p>Análogamente se puede realizar la resta de matrices.</p>
+<p></p>
+<p>Ejemplo: </p>
+<p>\[ \begin{pmatrix}{}<br />15 &amp; 12 &amp; 2 \\ <br />4 &amp; 15 &amp; 2 \\ <br />7 &amp; -3 &amp; 8 \\ <br />\end{pmatrix} + \begin{pmatrix}{}<br />7 &amp; 5 &amp; 9 \\ <br />-5 &amp; 11 &amp; -14 \\ <br />-10 &amp; 9 &amp; 14 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />22 &amp; 17 &amp; 11 \\ <br />-1 &amp; 26 &amp; -12 \\ <br />-3 &amp; 6 &amp; 22 \\ <br />\end{pmatrix} \]</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_exe" id="id28">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_exe.png)"><h1 class="iDeviceTitle">Producto de un escalar por una matriz</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_131_2" class="block iDevice_content">
+<div class="exe-text"><p>El producto de un número \(n\) por una matriz \(A\), \(n\times A\), consiste en sumar \(n\) veces la matriz \(A\). O lo que es equivalente, multiplicar cada uno de los términos de la matriz por el número \(n\).</p>
+<p>\[n\times  \begin{pmatrix} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} \end{pmatrix}=\begin{pmatrix} n\times a_{1,1} &amp; n \times a_{1,2} &amp; \cdots &amp; n \times a_{1,n}\\ n\times  a_{2,1} &amp; n \times a_{2,2} &amp; \cdots &amp; n \times a_{2,n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ n \times a_{m,1}&amp; n \times a_{m,2} &amp; \cdots &amp; n \times a_{m,n} \end{pmatrix}\]</p>
+<p>Ejemplo:</p>
+<p>\[ 5 \cdot \begin{pmatrix}{}<br />-11 &amp; -1 &amp; 12 \\ <br />-15 &amp; -2 &amp; -11 \\ <br />-11 &amp; 11 &amp; -11 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />-55 &amp; -5 &amp; 60 \\ <br />-75 &amp; -10 &amp; -55 \\ <br />-55 &amp; 55 &amp; -55 \\ <br />\end{pmatrix}\]</p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_exe" id="id29">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_exe.png)"><h1 class="iDeviceTitle">Producto de matrices</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_132_2" class="block iDevice_content">
+<div class="exe-text"><p>Si tenemos dos matrices \(A\) de orden \(m\times n\) y \(B\) de orden \(p \times q \), el producto \( A\times B\) es otra matriz cuyos elementos se obtienen multiplicando de forma ordenada cada fila de la matriz \(A\) por todas las columnas de la matriz \(B\).  Así, el elemento que ocupa la posición 1,2 es el resultado de multiplicar la fila 1 de la matriz \(A\) por la columna 2 de la matriz \(B\), es decir, cada elemento de la fila 1 de la matriz \(A\) se multiplica por el elemento correspondiente de la columna 2 de la matriz \(B\) y se suman los resultados.</p>
+<p></p>
+<p>Por tanto, el número de elementos que tiene la matriz \(A\) en cada fila (número de columnas de \(A\)) tiene que coincidir con el número de elementos que tenga la matriz \(B\) en cada columna (número de filas de \(B\)). Es decir, \(n=p\).</p>
+<p>El orden de \(A\times B\) es \(m\times q\).</p>
+<p></p>
+<p><strong><span style="font-size: 14pt;">Ejemplo:</span></strong></p>
+<p><span style="font-size: 12pt;">\[\begin{pmatrix} 3 &amp; 1 \\ 2 &amp; 0 \\ -1 &amp; 1 \end{pmatrix} \cdot\begin{pmatrix} 2 &amp; -1  &amp; 0 \\ 1 &amp; 0 &amp; 3 \end{pmatrix} = \begin{pmatrix} 7 &amp; -3 &amp; 3 \\  4 &amp; -2 &amp; 0 \\ -1 &amp; 1 &amp; 3 \end{pmatrix}\]<br /></span></p>
+<p><span style="font-size: 12pt;"></span></p>
+<p><span style="font-size: 12pt;">\[ \begin{pmatrix}{}<br />11 &amp; -2 &amp; 10 \\ <br />11 &amp; 14 &amp; -4 \\ <br />10 &amp; 4 &amp; 11 \\ <br />\end{pmatrix} \cdot  \begin{pmatrix}{}<br />-13 &amp; 4 &amp; 7 \\ <br />-9 &amp; 2 &amp; -9 \\ <br />10 &amp; -5 &amp; -12 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />-25 &amp; -10 &amp; -25 \\ <br />-309 &amp; 92 &amp; -1 \\ <br />-56 &amp; -7 &amp; -98 \\ <br />\end{pmatrix} \]</span></p>
+<p><span style="font-size: 12pt;"></span>  </p>
+<p>\[ \begin{pmatrix}{}<br />5 &amp; -4 &amp; 14 \\ <br />-6 &amp; 13 &amp; -6 \\ <br />-8 &amp; 6 &amp; -2 \\ <br />\end{pmatrix}\cdot \begin{pmatrix}{}<br />-15 \\ <br />-5 \\ <br />-3 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />-97 \\ <br />43 \\ <br />96 \\ <br />\end{pmatrix} \]</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_share" id="id32">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_share.png)"><h1 class="iDeviceTitle">Importante</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_135_2" class="block iDevice_content">
+<div class="exe-text"><p>Igual que si multiplicas cualquier número por 1 obtienes el mismo número, hay una matriz que tiene el mismo efecto. La matriz identidad \(I\) cumple que si la multiplicas por cualquier otra matriz, al final nos queda esa segunda matriz.</p>
+<p>Recuerda que la matriz identidad está formada por 1 en la diagonal y 0 en el resto de elementos.</p>
+<p>Ejemplo: </p>
+<p>\[\begin{pmatrix}{}<br />-25 &amp; -10 &amp; -25 \\ <br />-309 &amp; 92 &amp; -1 \\ <br />-56 &amp; -7 &amp; -98 \\ <br />\end{pmatrix}\cdot \begin{pmatrix}{}<br />1 &amp; 0 &amp; 0 \\ <br />0 &amp; 1 &amp; 0 \\ <br />0 &amp; 0 &amp; 1 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />-25 &amp; -10 &amp; -25 \\ <br />-309 &amp; 92 &amp; -1 \\ <br />-56 &amp; -7 &amp; -98 \\ <br />\end{pmatrix} \]</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper QuizTestIdevice em_iDevice em_iDevice_question" id="id76">
+<script type="text/javascript">/*<![CDATA[*/
+var numQuestions = 2;
+var rawScore = 0;
+var actualScore = 0;
+var question0;
+var question1;
+var key0 = 0;
+var key1 = 1;
+function getAnswer()
+        {
+            for (var i=0; i < 2; i++)
+            {
+               if (document.getElementById("quizForm76").key0b76[i].checked)
+               {
+                  question0 = document.getElementById("quizForm76").key0b76[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 2; i++)
+            {
+               if (document.getElementById("quizForm76").key1b76[i].checked)
+               {
+                  question1 = document.getElementById("quizForm76").key1b76[i].value;
+                  break;
+               }
+            }
+            }
+        function calcRawScore(){
+
+            if (question0 == key0)
+            {
+               rawScore++;
+            }
+            if (question1 == key1)
+            {
+               rawScore++;
+            }
+        
+        }
+        
+        function calcScore2()
+        {
+            getAnswer();
+     
+            calcRawScore();
+            actualScore =  Math.round(rawScore / numQuestions * 100);
+            var id = "76";
+            document.getElementById("quizForm"+id).submitB.disabled = true;
+            var s = document.getElementById("quizFormScore"+id);
+                        var msg_str ="Su puntuación es %d%%";            msg_str = msg_str.replace("%d",actualScore).replace("%%","%");            if (s) { s.innerHTML = "<div class='feedback'><p>"+msg_str+"</p></div>"; } else { alert(msg_str); }
+           
+        }
+    /*]]>*/</script>
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">¿Pueden multiplicarse las siguientes matrices?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<form name="quizForm76" id="quizForm76" action="#" class="quiz-test-form">
+<input type="hidden" name="passrate" id="passrate-76" value="50" />
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion0b76" class="block iDevice_content">
+<p>\(\begin{pmatrix}{}<br />0 &amp; -3 &amp; -10 \\ <br />-8 &amp; 12 &amp; -7 \\ <br />2 &amp; 11 &amp; -14 \\ <br />\end{pmatrix}\) y \(\begin{pmatrix}{}<br />-13 &amp; -13 &amp; -12 &amp; -3 \\ <br />8 &amp; -10 &amp; 15 &amp; -15 \\ <br />8 &amp; -13 &amp; -8 &amp; -11 \\ <br />\end{pmatrix}\)</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key0b761" class="sr-av"><a href="#answer-key0b761">Opción 1</a></label><input type="radio" name="key0b76" id="key0b761" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key0b761">
+<div id="taoptionAnswer0q0b76" class="block iDevice_content">
+<p>Si</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key0b762" class="sr-av"><a href="#answer-key0b762">Opción 2</a></label><input type="radio" name="key0b76" id="key0b762" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key0b762">
+<div id="taoptionAnswer1q0b76" class="block iDevice_content">
+<p>No</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion1b76" class="block iDevice_content">
+<p>\(\begin{pmatrix}{}<br />10 &amp; -4 &amp; -13 \\ <br />-12 &amp; -14 &amp; 2 \\ <br />\end{pmatrix}\) y \(\begin{pmatrix}{}<br />-13 &amp; -6 &amp; 6 &amp; -8 \\ <br />-5 &amp; -12 &amp; -14 &amp; -1 \\ <br />\end{pmatrix}\)</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key1b761" class="sr-av"><a href="#answer-key1b761">Opción 1</a></label><input type="radio" name="key1b76" id="key1b761" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key1b761">
+<div id="taoptionAnswer0q1b76" class="block iDevice_content">
+<p>Si</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key1b762" class="sr-av"><a href="#answer-key1b762">Opción 2</a></label><input type="radio" name="key1b76" id="key1b762" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key1b762">
+<div id="taoptionAnswer1q1b76" class="block iDevice_content">
+<p>No</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<div class="block iDevice_buttons">
+<p><input type="submit" name="submitB" value="ENVIAR RESPUESTAS" /> <span class="js-hidden js-warning">Habilitar JavaScript</span></p>
+</div>
+<div id="quizFormScore76"></div>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id77">
+<div class="iDevice emphasis0" >
+<div id="ta77_129_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #ff0000;">Importante:</span> El producto de matrices no es conmutativo. Esto es, no es lo mismo multiplicar \(A\times B\) que multiplicar \(B\times A\).</p>
+<p>Ejemplo:<br />\[A\times B = \begin{pmatrix}{}<br />3 &amp; 7 \\ <br />1 &amp; 9 \\ <br />\end{pmatrix} \cdot \begin{pmatrix}{}<br />9 &amp; 10 \\ <br />5 &amp; 8 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />62 &amp; 86 \\ <br />54 &amp; 82 \\ <br />\end{pmatrix} \neq \begin{pmatrix}{}<br />37 &amp; 153 \\ <br />23 &amp; 107 \\ <br />\end{pmatrix} = \begin{pmatrix}{}<br />9 &amp; 10 \\ <br />5 &amp; 8 \\ <br />\end{pmatrix} \cdot \begin{pmatrix}{}<br />3 &amp; 7 \\ <br />1 &amp; 9 \\ <br />\end{pmatrix} = B\times A\]</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="introduccin_a_las_matrices.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>
