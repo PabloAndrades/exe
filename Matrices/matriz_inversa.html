@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Matriz inversa | Álgebra Lineal: Matrices y Determinantes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Pablo Andrades Moya" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 Portable - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="geogebra-activity.css" />
+<script type="text/javascript" src="geogebra-activity.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-auto-math" id="exe-node-26"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Álgebra Lineal: Matrices y Determinantes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Álgebra lineal</a></li>
+   <li><a href="introduccin_a_las_matrices.html" class="no-ch">Introducción a las matrices</a></li>
+   <li><a href="operaciones_con_matrices.html" class="no-ch">Operaciones con matrices</a></li>
+   <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+   <li><a href="introduccin_a_los_determinantes.html" class="no-ch">Introducción a los determinantes</a></li>
+   <li><a href="propiedades_de_los_determinantes.html" class="no-ch">Propiedades de los determinantes</a></li>
+   <li><a href="determinantes_de_orden_superior.html" class="no-ch">Determinantes de orden superior</a></li>
+   <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+   <li id="active"><a href="matriz_inversa.html" class="active no-ch">Matriz inversa</a></li>
+   <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
+   <li><a href="ejercicios_selectividad.html" class="no-ch">Ejercicios Selectividad</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="autoevaluacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Matriz inversa</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Cálculo de la matriz inversa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Como habíamos comentado en la sección "Introducción a los determinantes", para que una matriz sea <strong>invertible</strong>, lo único que se necesita es que tenga determinante no nulo, lo cual también implica que la matriz sea cuadrada para poder calcular el determinante.</p>
+<p>Dada una matriz \(A\), escribiremos la inversa de la matriz \(A\), por \(A^{-1}\). Para hallar la inversa seguiremos los siguientes pasos:</p>
+<ul>
+<li>Comprobamos que la matriz sea cuadrada, en caso afirmativo se calcula el determinante, en caso contrario, la matriz no es invertible, es decir, no tiene inversa.</li>
+<li>Si el determinante es cero, la matriz no es invertible.</li>
+<li>En caso de que el determinante no sea nulo, calculamos la matriz adjunta de A, \(Adj(A)\).</li>
+<li>Trasponemos la matriz adjunta, \(Adj(A)^t\).</li>
+<li>Multiplicamos ahora el inverso del determinante de A por la traspuesta de la matriz adjunta, esto es: \[A^{-1} = \frac{1}{det(A)} \cdot Adj(A)^t\]</li>
+</ul>
+<p>Para el caso de que \(A\) tenga orden \(2\times 2\), se calculará de la siguiente forma:</p>
+<p>\[A^{-1} = \begin{pmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{pmatrix}^{-1} = \frac{1}{det(A)} \begin{pmatrix} a_{2} &amp; -a_{12} \\ -a_{21} &amp; a_{11} \end{pmatrix} \]</p>
+<p>Ejemplo: Dada la matriz \(A = \begin{pmatrix} 3 &amp; 1 \\ 5 &amp; 2 \end{pmatrix}\), calcula su inversa.</p>
+<p>\[A^{-1} = \frac{1}{det(A)} Adj \begin{pmatrix} 3 &amp; 1 \\ 5 &amp; 2 \end{pmatrix}^t =  \frac{1}{1}  \begin{pmatrix} 2 &amp; -5  \\ -1 &amp; 3 \end{pmatrix}^t =  \begin{pmatrix} 2 &amp; -1  \\ -5 &amp; 3 \end{pmatrix}\]</p>
+<p>Para el caso de una matriz \(A\) de orden \(3\times 3\), el proceso es totalmente análogo, aunque más tedioso.</p>
+<p>Ejemplo: Dada la matriz \(A =  \begin{pmatrix} 1 &amp; 0  &amp; -1 \\ 0 &amp; 2 &amp; 3 \\ 1 &amp; -1 &amp; 1 \end{pmatrix}\) calcula su inversa.</p>
+<p>\[A^{-1} = \frac{1}{7} Adj \begin{pmatrix} 1 &amp; 0  &amp; -1 \\ 0 &amp; 2 &amp; 3 \\ 1 &amp; -1 &amp; 1 \end{pmatrix}^t= \frac{1}{7} \begin{pmatrix} 5 &amp; 3  &amp; -2 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; -3 &amp; 2 \end{pmatrix}^t = \frac{1}{7} \begin{pmatrix} 5 &amp; 1  &amp; 2 \\ 3 &amp; 2 &amp; -3 \\ -2 &amp; 1 &amp; 2 \end{pmatrix}\]</p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper TrueFalseIdevice em_iDevice em_iDevice_question" id="id79">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Indica si las siguientes matrices son invertibles o no</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta79_112" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b79" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b79" class="block iDevice_content">
+<p>\(\begin{pmatrix}{}<br />4 &amp; 9 &amp; 6 &amp; 9 \\ <br />2 &amp; 4 &amp; 9 &amp; 9 \\ <br />6 &amp; 3 &amp; 4 &amp; 6 \\ <br />\end{pmatrix}\)</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b79"><input type="radio" name="option0b79" id="true0b79" class="exe-radio-option exe-radio-option-0-2-0b79-truefalse" /> Verdadero</label> 
+<label for="false0b79"><input type="radio" name="option0b79" id="false0b79" class="exe-radio-option exe-radio-option-1-2-0b79-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b79" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b79-result" class="wrong">Falso</strong></p>
+
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-1b79" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 2</h1>
+<div id="taquestion1b79" class="block iDevice_content">
+<p>\(\begin{pmatrix}{}<br />9 &amp; 4 &amp; 10 &amp; 5 \\ <br />10 &amp; 5 &amp; 1 &amp; 1 \\ <br />6 &amp; 0 &amp; 3 &amp; 0 \\ <br />4 &amp; 9 &amp; 6 &amp; 7 \\ <br />\end{pmatrix}\)</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true1b79"><input type="radio" name="option1b79" id="true1b79" class="exe-radio-option exe-radio-option-0-2-1b79-truefalse" /> Verdadero</label> 
+<label for="false1b79"><input type="radio" name="option1b79" id="false1b79" class="exe-radio-option exe-radio-option-1-2-1b79-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s1b79" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s1b79-result" class="right">Verdadero</strong></p>
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id95">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Propiedades de la matriz inversa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta95_127_2" class="block iDevice_content">
+<div class="exe-text"><ul>
+<li>Dada una matriz \(A\) regular, esto es invertible, la matriz inversa de \(A\) es única.</li>
+<li>Si \(B\) y \(C\) son dos matrices regulares, entonces la matriz inversa del producto \(BC\) es: \((BC)^{-1} = C^{-1}B^{-1}\).</li>
+<li>Si la matriz \(A\) es regular, entonces también lo es su traspuesta, y el inverso de su traspuesta es la traspuesta de su inverso, es decir: \((A^t)^{-1} = (A^{-1})^t\).</li>
+<li>Si invertimos dos veces la misma matriz \(A\), obtenemos la matriz original \(A\), esto es: \((A^{-1})^{-1} = A\).</li>
+<li>Si multiplicamos una matriz \(A\) de orden \(n\times n\) por su inversa \(A^{-1}\), obtenemos la matriz identidad de orden \(n\times n\), es decir, \(A\cdot A^{-1} = I_{n\times n}\).</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper GeoGebraIdevice em_iDevice" id="id96">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Actividad de GeoGebra</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta96_127_2" class="block iDevice_content">
+<div class="auto-geogebra auto-geogebra-wjbfhpvn auto-geogebra-width-1273 auto-geogebra-height-667 language-es enableShiftDragZoom auto-geogebra-scale-84 auto-geogebra-evaluation-id-0 auto-geogebra-ideviceid-2024528324-120"><div class="auto-geogebra-instructions"><p>Comprobación de matriz inversa.</p></div><p><a href="https://www.geogebra.org/m/wjbfhpvn" target="_blank">https://www.geogebra.org/m/wjbfhpvn (Ventana nueva)</a></p><div class="auto-geogebra-author js-hidden">Pablo,https%3A//www.geogebra.org/m/wjbfhpvn,Matriz%20Inversa,1,Autor%EDa</div><div class="auto-geogebra-messages-evaluation">Actividad%20no%20completada,Actividad%20superada.%20Puntuaci%F3n%3A%20%25s,Actividad%20no%20superada.%20Puntuaci%F3n%3A%20%25s,Guardar%20la%20puntuaci%F3n</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="autoevaluacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>
